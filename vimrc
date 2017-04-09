@@ -5,10 +5,10 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
 Plugin 'keith/swift.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 
@@ -20,7 +20,6 @@ set encoding=utf-8
 
 " Set screen defaults
 set backspace=2
-set cursorline
 set laststatus=2
 set linebreak
 set nojoinspaces
@@ -67,18 +66,17 @@ set smartcase
 set viminfo=
 
 " Set display settings
-set background=dark
-colorscheme solarized
-if has("gui_running")
-  set lines=24 columns=80
-  set linespace=2
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
-endif
+colorscheme desert
 
 " Set Airline settings
-if has("gui_running")
-  let g:airline_powerline_fonts=1
-else
-  let g:airline_left_sep=''
-  let g:airline_right_sep=''
+let g:airline_theme='papercolor'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
 endif
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
