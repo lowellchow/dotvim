@@ -7,7 +7,7 @@ This is the Github repository for my Vim configuration.
 To clone this Vim configuration to a new machine, run the following command:
 
 ```terminal
-git clone git://github.com/lowellchow/dotvim.git ~/.vim
+git clone https://github.com/lowellchow/dotvim.git ~/.vim
 ```
 
 Then symlink the `vimrc` file from the `.vim` directory to the home directory:
